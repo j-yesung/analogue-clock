@@ -1,9 +1,5 @@
-const App = () => {
-  return (
-    <>
-      <div>App Components</div>
-    </>
-  );
-};
+import Clock from './components/Clock';
+
+const App = () => <Clock />;
 
 export default App;
