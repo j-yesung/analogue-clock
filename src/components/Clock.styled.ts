@@ -20,20 +20,23 @@ export const ClockHand = styled.div`
   background-color: black;
 `;
 
-export const Hour = styled(ClockHand)`
+export const Hour = styled(ClockHand)<{ hour: number }>`
   width: 6px;
   height: 50px;
+  ${({ hour }) => `transform: rotate(${hour}deg);`}
 `;
 
-export const Minute = styled(ClockHand)`
+export const Minute = styled(ClockHand)<{ minute: number }>`
   width: 4px;
   height: 70px;
+  ${({ minute }) => `transform: rotate(${minute}deg);`}
 `;
 
-export const Second = styled(ClockHand)`
+export const Second = styled(ClockHand)<{ second: number }>`
   width: 2px;
   height: 90px;
   background-color: red;
+  ${({ second }) => `transform: rotate(${second}deg);`}
 `;
 
 export const ClockNumberWrapper = styled.div`
@@ -50,7 +53,5 @@ export const ClockNumber = styled.span<{ x: number; y: number }>`
   transform-origin: center;
   transform: translate(-50%, -50%);
   user-select: none;
-  /* left: ${props => props.x}px;
-  top: ${props => props.y}px; */
   ${({ x, y }) => `transform: translate(${x}px, ${y}px);`}
 `;

@@ -15,9 +15,9 @@ const Clock = () => {
             <ClockNumber key={number} number={number} angle={number * 30} />
           ))}
         </S.ClockNumberWrapper>
-        <S.Hour style={{ transform: `rotate(${hourDegrees}deg)` }}></S.Hour>
-        <S.Minute style={{ transform: `rotate(${minuteDegrees}deg)` }}></S.Minute>
-        <S.Second style={{ transform: `rotate(${secondDegrees}deg)` }}></S.Second>
+        <S.Hour hour={hourDegrees} />
+        <S.Minute minute={minuteDegrees} />
+        <S.Second second={secondDegrees} />
       </S.ClockWrapper>
     </>
   );
