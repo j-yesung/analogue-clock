@@ -47,13 +47,14 @@ export const ClockNumberWrapper = styled.div`
   align-items: center;
 `;
 
-export const ClockNumber = styled.span<{ x: number; y: number }>`
+export const ClockNumber = styled.span<{ $x: number; $y: number }>`
   position: absolute;
   font-size: 18px;
   transform-origin: center;
   transform: translate(-50%, -50%);
   user-select: none;
-  ${({ x, y }) => `transform: translate(${x}px, ${y}px);`}
+  ${({ $x, $y }) => `transform: translate(${$x}px, ${$y}px);`}
+`;
 
 export const Tooltip = styled.div<{ $isVisible: boolean; $x: number; $y: number }>`
   position: fixed;

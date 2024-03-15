@@ -11,7 +11,7 @@ const ClockNumber = ({ number, angle }: ClockNumberProps) => {
 
   return (
     <S.ClockNumberWrapper>
-      <S.ClockNumber x={x} y={y}>
+      <S.ClockNumber $x={x} $y={y}>
         {number}
       </S.ClockNumber>
     </S.ClockNumberWrapper>
