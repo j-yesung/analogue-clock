@@ -8,18 +8,14 @@ const Clock = () => {
   const { hourDegrees, minuteDegrees, secondDegrees } = useClock(0);
 
   return (
-    <>
-      <S.ClockWrapper>
-        <S.ClockNumberWrapper>
-          {NUMBERS.map(number => (
-            <ClockNumber key={number} number={number} angle={number * 30} />
-          ))}
-        </S.ClockNumberWrapper>
-        <S.Hour hour={hourDegrees} />
-        <S.Minute minute={minuteDegrees} />
-        <S.Second second={secondDegrees} />
-      </S.ClockWrapper>
-    </>
+    <S.ClockWrapper>
+      {NUMBERS.map(number => (
+        <ClockNumber key={number} number={number} angle={number * 30} />
+      ))}
+      <S.Hour hour={hourDegrees} />
+      <S.Minute minute={minuteDegrees} />
+      <S.Second second={secondDegrees} />
+    </S.ClockWrapper>
   );
 };
 
