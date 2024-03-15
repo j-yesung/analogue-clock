@@ -1,11 +1,9 @@
-import { useClock } from '../hooks/useClock';
+import { NUMBERS, useClock } from '../hooks/useClock';
 import { useTooltip } from '../hooks/useTooltip';
 import * as S from './Clock.styled';
 import ClockHands from './ClockHands';
 import ClockNumber from './ClockNumber';
 import ClockToolTip from './ClockTooltip';
-
-const NUMBERS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 const Clock = () => {
   const { handleMouseEnter, handleMouseLeave } = useClock(0);

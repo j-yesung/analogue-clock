@@ -1,6 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { setIsVisible } from '../redux/modules/clockSlice';
 import { useDispatch } from 'react-redux';
+
+export const NUMBERS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 export const useClock = (angle: number) => {
   const [date, setDate] = useState(new Date());
@@ -19,8 +21,13 @@ export const useClock = (angle: number) => {
   const x = radius * Math.sin(radian);
   const y = -radius * Math.cos(radian);
 
-  const handleMouseEnter = () => dispatch(setIsVisible(true));
-  const handleMouseLeave = () => dispatch(setIsVisible(false));
+  const handleMouseEnter = useCallback(() => {
+    dispatch(setIsVisible(true));
+  }, [dispatch]);
+
+  const handleMouseLeave = useCallback(() => {
+    dispatch(setIsVisible(false));
+  }, [dispatch]);
 
   useEffect(() => {
     const timerId = setInterval(() => setDate(new Date()), 1000);
