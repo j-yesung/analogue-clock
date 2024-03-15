@@ -54,4 +54,16 @@ export const ClockNumber = styled.span<{ x: number; y: number }>`
   transform: translate(-50%, -50%);
   user-select: none;
   ${({ x, y }) => `transform: translate(${x}px, ${y}px);`}
+
+export const Tooltip = styled.div<{ $isVisible: boolean; $x: number; $y: number }>`
+  position: fixed;
+  padding: 8px;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  font-size: 14px;
+  visibility: ${({ $isVisible }) => ($isVisible ? 'visible' : 'hidden')};
+  transform: translate(20px, -20px);
+  left: ${({ $x }) => `${$x}px`};
+  top: ${({ $y }) => `${$y}px`};
 `;

@@ -19,6 +19,7 @@ const Clock = () => {
         ))}
         <ClockHands />
       </S.ClockWrapper>
+      <ClockToolTip />
     </>
   );
 };
