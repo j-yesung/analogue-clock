@@ -6,9 +6,9 @@ const ClockHands = () => {
 
   return (
     <section>
-      <S.Hour hour={hourDegrees} />
-      <S.Minute minute={minuteDegrees} />
-      <S.Second second={secondDegrees} />
+      <S.Hour $hour={hourDegrees} />
+      <S.Minute $minute={minuteDegrees} />
+      <S.Second $second={secondDegrees} />
     </section>
   );
 };
