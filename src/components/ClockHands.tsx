@@ -1,8 +1,8 @@
-import { useClock } from '../hooks/useClock';
 import * as S from './Clock.styled';
+import { useDate } from '../hooks/useDate';
 
 const ClockHands = () => {
-  const { hourDegrees, minuteDegrees, secondDegrees } = useClock(0);
+  const { hourDegrees, minuteDegrees, secondDegrees } = useDate();
 
   return (
     <section>
