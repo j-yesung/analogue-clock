@@ -7,7 +7,8 @@ interface ClockNumberProps {
 }
 
 const ClockNumber = ({ number, angle }: ClockNumberProps) => {
-  const { x, y } = useClock(angle);
+  const { angleConvert } = useClock();
+  const { x, y } = angleConvert(angle);
 
   return (
     <S.ClockNumberWrapper>

@@ -6,7 +6,7 @@ import ClockNumber from './ClockNumber';
 import ClockToolTip from './ClockTooltip';
 
 const Clock = () => {
-  const { handleMouseEnter, handleMouseLeave } = useClock(0);
+  const { handleMouseEnter, handleMouseLeave } = useClock();
   const { handleMouseMove } = useTooltip();
 
   return (
